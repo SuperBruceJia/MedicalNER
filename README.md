@@ -6,7 +6,7 @@
 
 **Background**: Medical & Clinical Healthcare 
 
-**Level**: Character Level
+**Level**: Character (and Word) Level
 
 **Method**:
 
