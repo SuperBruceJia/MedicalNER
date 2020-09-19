@@ -12,7 +12,7 @@
 
 1. CRF++
 
-2. Character-level BiLSTM-CRF
+2. Character-level BiLSTM + CRF
 
 3. Character-level BiLSTM + Word-level BiLSTM + CRF
 
