@@ -99,7 +99,7 @@ At the root of the project, you will see:
 
 --------------------------------------------------------------------------------
 
-## Model Architecture
+## Basic  Model Architecture
 
 ```text
     Character Input
@@ -120,16 +120,8 @@ Output corresponding tags  ---> [NLL Loss] <---  Target tags
 ## Limitations
 
 1. Currently only support CPU training
+
 2. Cannot recognize entities with fewer examples (< 500 samples)
-
---------------------------------------------------------------------------------
-
-## Questions
-
-1. Some F1 Scores were always 0
-2. Some entities' F1 scores are unstable, i.e., always fluctuate.
-2. The loss of the model always ups and downs even with (very) small learning rate
-3. Cannot recognize entities whose **number of samples are less than 500** --> data imbalance?
 
 --------------------------------------------------------------------------------
 
