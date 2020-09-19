@@ -8,7 +8,15 @@
 
 **Level**: Character Level
 
-**Method**: BiLSTM-CRF
+**Method**:
+
+1. CRF++
+
+2. Character-level BiLSTM-CRF
+
+3. Character-level BiLSTM + Word-level BiLSTM + CRF
+
+4. Character-level BiLSTM + Word-level CNN + CRF
 
 --------------------------------------------------------------------------------
 
