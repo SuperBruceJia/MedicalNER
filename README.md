@@ -8,6 +8,8 @@
 
 **Level**: Character (and Word) Level
 
+**Data Annotation**: BIOES tagging Scheme
+
 **Method**:
 
 1. CRF++
