@@ -20,6 +20,14 @@
 
 4. Character-level BiLSTM + Word-level CNN + CRF
 
+For Word-level models:
+
+***The pre-trained word vectors can be downloaded [here](https://drive.google.com/file/d/1b_D5OQHm1XFlHKcMaWUJ8ABiQNPM0meS/view?usp=sharing).***
+
+For Character-level models:
+
+***The Embedding of characters is initialized and updated through PyTorch Function (nn.Embedding).***
+
 --------------------------------------------------------------------------------
 
 ## Some Statistics Info
@@ -166,3 +174,9 @@ Separate F1 score on each entity:
 |epochs          | 100    |
 |weight decay    | 0.0005 |
 |max length      | 100 / 120   |
+
+--------------------------------------------------------------------------------
+
+## Licence
+
+MIT Licence
