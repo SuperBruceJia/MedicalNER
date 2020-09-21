@@ -46,7 +46,7 @@ def load_word_vector(self):
 
 For Character-level models:
 
-***The Embedding of characters is initialized and updated through PyTorch Function (nn.Embedding).***
+***The Embeddings of characters are randomly initialized and updated by a PyTorch Function, i.e., (nn.Embedding).***
 
 ```python
 self.char_embed = nn.Embedding(num_embeddings=vocab_size, embedding_dim=self.char_dim)
