@@ -20,6 +20,12 @@
 
 4. Character-level BiLSTM + Word-level CNN + CRF
 
+**Results**:
+
+Results of this work can be downloaded [here](https://github.com/SuperBruceJia/MedicalNER/raw/master/NER-Models-Results.xlsx).
+
+**Prerequisities**:
+
 For Word-level models:
 
 ***The pre-trained word vectors can be downloaded [here](https://drive.google.com/file/d/1b_D5OQHm1XFlHKcMaWUJ8ABiQNPM0meS/view?usp=sharing).***
