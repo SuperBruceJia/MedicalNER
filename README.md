@@ -229,7 +229,7 @@ The BiLSTM + CRF model has been deployed using **Docker** + **Flask** as a webap
 
 4. [A Survey on Deep Learning for Named Entity Recognition](https://github.com/SuperBruceJia/paper-reading/raw/master/NLP-field/Named-Entity-Recognition/A%20Survey%20on%20Deep%20Learning%20for%20Named%20Entity%20Recognition.pdf)
 
-### SOTA Method for NER
+### SOTA Method for NER (I think)
 
 1. [Lattice LSTM](https://github.com/SuperBruceJia/paper-reading/raw/master/NLP-field/Named-Entity-Recognition/%E8%AF%8D%E6%B1%87%E5%A2%9E%E5%BC%BANER/Lattice%20LSTM%20%20-%20Lattice%20LSTM%20for%20Chinese%20Sentence%20Representation.pdf)
 
@@ -242,4 +242,3 @@ The BiLSTM + CRF model has been deployed using **Docker** + **Flask** as a webap
 ## Licence
 
 MIT Licence
-
