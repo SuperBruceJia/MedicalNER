@@ -24,9 +24,27 @@ For Word-level models:
 
 ***The pre-trained word vectors can be downloaded [here](https://drive.google.com/file/d/1b_D5OQHm1XFlHKcMaWUJ8ABiQNPM0meS/view?usp=sharing).***
 
+```python
+def load_word_vector(self):
+    """
+    Load word vectors
+    """
+    print("Start to load pre-trained word vectors!!")
+    pre_trained = {}
+    for i, line in enumerate(codecs.open(self.model_path + "word_vectors.vec", 'r', encoding='utf-8')):
+        line = line.rstrip().split()
+        if len(line) == self.word_dim + 1:
+            pre_trained[line[0]] = np.array([float(x) for x in line[1:]]).astype(np.float32)
+    return pre_trained
+```
+
 For Character-level models:
 
 ***The Embedding of characters is initialized and updated through PyTorch Function (nn.Embedding).***
+
+```python
+self.char_embed = nn.Embedding(num_embeddings=vocab_size, embedding_dim=self.char_dim)
+```
 
 --------------------------------------------------------------------------------
 
@@ -128,6 +146,8 @@ Output corresponding tags  ---> [NLL Loss] <---  Target tags
 ## Limitations
 
 1. Currently only support CPU training
+    
+    GPU is much more slower than the CPU as a result of the viterbi decode's FOR LOOP. 
 
 2. Cannot recognize entities with fewer examples (< 500 samples)
 
