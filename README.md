@@ -28,7 +28,7 @@
 
 &emsp;For Word-level models:
 
-&emsp;***The pre-trained word vectors can be downloaded [here](https://drive.google.com/file/d/1b_D5OQHm1XFlHKcMaWUJ8ABiQNPM0meS/view?usp=sharing).***
+&emsp;The pre-trained word vectors can be downloaded [here](https://drive.google.com/file/d/1b_D5OQHm1XFlHKcMaWUJ8ABiQNPM0meS/view?usp=sharing).
 
 ```python
     def load_word_vector(self):
@@ -46,7 +46,7 @@
 
 &emsp;For Character-level models:
 
-&emsp;***The Embeddings of characters are randomly initialized and updated by a PyTorch Function, i.e., (nn.Embedding).***
+&emsp;The Embeddings of characters are randomly initialized and updated by a PyTorch Function, i.e., (nn.Embedding).
 
 ```python
     self.char_embed = nn.Embedding(num_embeddings=vocab_size, embedding_dim=self.char_dim)
