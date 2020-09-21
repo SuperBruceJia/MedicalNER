@@ -2,7 +2,7 @@
 
 ## Topic and Study
 
-**Task**: Named Entity Recognition (NER)
+**Task**: Named Entity Recognition (NER) implemented using PyTorch
 
 **Background**: Medical & Clinical Healthcare 
 
@@ -203,6 +203,43 @@ Separate F1 score on each entity:
 
 --------------------------------------------------------------------------------
 
+## Model Deployment
+
+The BiLSTM + CRF model has been deployed using **Docker** + **Flask** as a webapp.
+
+***The codes and demos were open-sourced in this [repo](https://github.com/SuperBruceJia/pytorch-flask-deploy-webapp).***
+
+### Screenshot of the model output: 
+
+<p align="center">
+  <a href="https://github.com/SuperBruceJia/pytorch-flask-deploy-webapp"> <img src="https://github.com/SuperBruceJia/pytorch-flask-deploy-webapp/raw/master/screenshot.png"></a> 
+</p>
+    
+--------------------------------------------------------------------------------
+
+## Reference
+
+### Traditional Methods for NER: BiLSTM + CNN + CRF 
+
+1. [Neural Architectures for Named Entity Recognition](https://github.com/SuperBruceJia/paper-reading/raw/master/NLP-field/Named-Entity-Recognition/Neural%20Architectures%20for%20Named%20Entity%20Recognition.pdf)
+
+2. [Log-Linear Models, MEMMs, and CRFs](https://github.com/SuperBruceJia/paper-reading/raw/master/NLP-field/Named-Entity-Recognition/Log-Linear%20Models%2C%20MEMMs%2C%20and%20CRFs.pdf)
+
+3. [Named Entity Recognition with Bidirectional LSTM-CNNs](https://github.com/SuperBruceJia/paper-reading/raw/master/NLP-field/Named-Entity-Recognition/Named%20Entity%20Recognition%20with%20Bidirectional%20LSTM-CNNs.pdf)
+
+4. [A Survey on Deep Learning for Named Entity Recognition](https://github.com/SuperBruceJia/paper-reading/raw/master/NLP-field/Named-Entity-Recognition/A%20Survey%20on%20Deep%20Learning%20for%20Named%20Entity%20Recognition.pdf)
+
+### SOTA Method for NER
+
+1. [Lattice LSTM](https://github.com/SuperBruceJia/paper-reading/raw/master/NLP-field/Named-Entity-Recognition/%E8%AF%8D%E6%B1%87%E5%A2%9E%E5%BC%BANER/Lattice%20LSTM%20%20-%20Lattice%20LSTM%20for%20Chinese%20Sentence%20Representation.pdf)
+
+2. [中文NER的正确打开方式: 词汇增强方法总结 (从Lattice LSTM到FLAT)](https://zhuanlan.zhihu.com/p/142615620)
+
+3. [工业界如何解决NER问题](https://my.oschina.net/u/4308645/blog/4333232)
+
+--------------------------------------------------------------------------------
+
 ## Licence
 
 MIT Licence
+
