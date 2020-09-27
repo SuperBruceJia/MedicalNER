@@ -31,17 +31,17 @@
 &emsp;The pre-trained word vectors can be downloaded [here](https://drive.google.com/file/d/1b_D5OQHm1XFlHKcMaWUJ8ABiQNPM0meS/view?usp=sharing).
 
 ```python
-    def load_word_vector(self):
-        """
-        Load word vectors
-        """
-        print("Start to load pre-trained word vectors!!")
-        pre_trained = {}
-        for i, line in enumerate(codecs.open(self.model_path + "word_vectors.vec", 'r', encoding='utf-8')):
-            line = line.rstrip().split()
-            if len(line) == self.word_dim + 1:
-                pre_trained[line[0]] = np.array([float(x) for x in line[1:]]).astype(np.float32)
-        return pre_trained
+def load_word_vector(self):
+    """
+    Load word vectors
+    """
+    print("Start to load pre-trained word vectors!!")
+    pre_trained = {}
+    for i, line in enumerate(codecs.open(self.model_path + "word_vectors.vec", 'r', encoding='utf-8')):
+        line = line.rstrip().split()
+        if len(line) == self.word_dim + 1:
+            pre_trained[line[0]] = np.array([float(x) for x in line[1:]]).astype(np.float32)
+    return pre_trained
 ```
 
 &emsp;For Character-level models:
@@ -49,7 +49,7 @@
 &emsp;The Embeddings of characters are randomly initialized and updated by a PyTorch Function, i.e., (nn.Embedding).
 
 ```python
-    self.char_embed = nn.Embedding(num_embeddings=vocab_size, embedding_dim=self.char_dim)
+self.char_embed = nn.Embedding(num_embeddings=vocab_size, embedding_dim=self.char_dim)
 ```
 
 --------------------------------------------------------------------------------
