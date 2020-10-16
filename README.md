@@ -1,5 +1,11 @@
 # Medical Named Entity Recognition (MedicalNER)
 
+## Abstract
+
+With the development of Medical Artificial Intelligence (AI) System, Natural Language Processing (NLP) has played an essential role to process medical texts and build intelligent machines. Named Entity Recognition (NER), one of the most basic NLP tasks, is primarily studied since it is the cornerstone of the following NLP downstream tasks, e.g., Relation Extraction. In this work, a character-level Bidirectional Long-short Term Memory (BiLSTM)-based models were introduced to tackle the challenge of medical texts. The input character embedding vectors were randomly initialized and then updated during training. The character-level BiLSTM extracted features from medical order-matter sequential data. The followed Conditional Random Field (CRF) predicted the final entity tag. Results have shown that the presented method took advantage of the recurrent architecture and achieved competitive performances for medical texts. Promising results paved the road towards building robust and powerful medical AI engines. 
+
+--------------------------------------------------------------------------------
+
 ## Topic and Study
 
 **Task**: Named Entity Recognition (NER) implemented using PyTorch
