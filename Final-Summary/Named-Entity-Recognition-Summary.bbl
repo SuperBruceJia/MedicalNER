@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{rumelhart1985learning}
+David~E Rumelhart, Geoffrey~E Hinton, and Ronald~J Williams.
+\newblock Learning internal representations by error propagation.
+\newblock Technical report, California Univ San Diego La Jolla Inst for
+  Cognitive Science, 1985.
+
+\bibitem{hou2020deep}
+Yimin Hou, Shuyue Jia, Shu Zhang, Xiangmin Lun, Yan Shi, Yang Li, Hanrui Yang,
+  Rui Zeng, and Jinglei Lv.
+\newblock Deep feature mining via attention-based bilstm-gcn for human motor
+  imagery recognition.
+\newblock {\em arXiv preprint arXiv:2005.00777}, 2020.
+
+\bibitem{pascanu2013difficulty}
+Razvan Pascanu, Tomas Mikolov, and Yoshua Bengio.
+\newblock On the difficulty of training recurrent neural networks.
+\newblock In {\em International conference on machine learning}, pages
+  1310--1318, 2013.
+
+\bibitem{lample2016neural}
+Guillaume Lample, Miguel Ballesteros, Sandeep Subramanian, Kazuya Kawakami, and
+  Chris Dyer.
+\newblock Neural architectures for named entity recognition.
+\newblock {\em arXiv preprint arXiv:1603.01360}, 2016.
+
+\bibitem{li2020survey}
+Jing Li, Aixin Sun, Jianglei Han, and Chenliang Li.
+\newblock A survey on deep learning for named entity recognition.
+\newblock {\em IEEE Transactions on Knowledge and Data Engineering}, 2020.
+
+\end{thebibliography}

@@ -1,0 +1,71 @@
+\documentclass{article}
+
+\usepackage{cite}
+\usepackage{float}
+\usepackage{bibcheck}
+\usepackage{graphicx}
+\usepackage[justification=centering]{caption}
+\usepackage{amssymb}
+\usepackage{amsopn}
+\usepackage{amstext}
+\usepackage{lscape}
+\usepackage[justification=centering]{subcaption}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage[backref]{hyperref}
+
+\captionsetup{compatibility=false}
+\captionsetup{font={scriptsize}}
+\newcommand{\reffig}[1]{Figure \ref{#1}}
+\newcommand{\reftab}[1]{Table \ref{#1}}
+\newcommand{\refsec}[1]{Section \ref{#1}}
+\newcommand{\refequ}[1]{Equation \ref{#1}}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+
+\providecommand{\keywords}[1]
+{
+	\small	
+	\textbf{\textit{Keywords---}} #1
+}
+
+\title{MedicalNER: Named Entity Recognition for Medical Text via Character-level BiLSTM-based Models}
+\author{Internship Candidate: Shuyue Jia}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+With the development of Medical Artificial Intelligence (AI) System, Natural Language Processing (NLP) has played an essential role to process medical texts and build intelligent machines. Named Entity Recognition (NER), one of the most basic NLP tasks, is primarily studied since it is the cornerstone of the following NLP downstream tasks, e.g., Relation Extraction. In this work, a character-level Bidirectional Long-short Term Memory (BiLSTM)-based models were introduced to tackle the challenge of medical texts. The input character embedding vectors were randomly initialized and then updated during training. The character-level BiLSTM extracted features from medical order-matter sequential data. The followed Conditional Random Field (CRF) predicted the final entity tag. Results have shown that the presented method took advantage of the recurrent architecture and achieved competitive performances for medical texts. Promising results paved the road towards building robust and powerful medical AI engines.
+\end{abstract}
+
+\keywords{Named Entity Recognition (NER), Bidirectional Long-short Term Memory (BiLSTM), Convolutional Neural Network (CNN)}
+
+\section{Introduction}
+Currently, researchers in the medical field have paid more attention towards building a robust Medical Artificial Intelligence (AI) System, taking IBM Watson as an example. Enterprise-level Medical AI products often suit up with a NLP engine to process medical texts and assist doctors. Multiple modules, however, made up with such a engine. Among those, Named Entity Recognition (NER), one of the most basic and cornerstone for medical NLP, plays a critical rule as its performance can directly influence the followed tasks, e.g., Relation Extraction (RE). Thus, the model needs to be elaborately designed and engineers try to achieve a trade-off between performance and model complexity, which can profoundly affect the deployment and operations (DevOps) in the industry. In this work, we presented character-level Bidirectional Long-short Term Memory (BiLSTM) to address the challenge of NER in the medical field.
+
+\section{Method}
+\subsection{Character Embedding Layer}
+As for the character-level BiLSTM model, the input to the BiLSTM is an embeded vector of a character. Before training the model, the word embeddings were randomly initialized with the dimensionality $K$. During training, a Deep Neural Network (DNN) hidden layer was applied to update the word embeddings which were the distributed representations for input characters. The character embeddings were set while evaluating.
+
+\subsection{BiLSTM Model}
+In recent years, Recurrent Neural Network (RNN)\cite{rumelhart1985learning} was broadly implemented to order-matter time-series signals\cite{hou2020deep}. One drawback of RNN was that it suffered a lot from gradient vanishing problem\cite{pascanu2013difficulty}. When there were a longer sequence, it cannot back-propagate errors and the long-term gradient was lost. To curb the problem, in this work, we employed BiLSTM model, which can learn the long-term dependencies and relief gradient vanishing problem. The input of BiLSTM was a sequence of medical texts with the dimensionality $N \times D$. $N$ is the number of characters in the sequence, and $D$ is the dimension of embedding for each character.
+
+\subsection{CRF Model}
+A softmax layer can output a probability distribution of entity tags. However, it does not consider the relationship between different tags. Thus, we applied the Conditional Random Field (CRF) model which can predict the possibility of each tag and the possibility between the tag and the followed tag. The CRF Model was optimized by Viterbi algorithm\cite{lample2016neural}.
+
+\subsection{Model Architecture}
+The main model was a fully-connected DNN layer, BiLSTM, and CRF model\cite{li2020survey}. The fully-connected DNN layer updated character embeddings, the BiLSTM extracted features from medical sequences, and the CRF model output predicted entity tag. The loss function we used was Negative Log-likelihood (NLL) Loss. The model parameters were learned through back-propagation algorithm.
+
+\section{Basics inside NER Task}
+\subsection{Data Annotation}
+We used \emph{BIOES tagging Scheme}: B: beginning, I: intermediate / inside, O: other, E: end, S: singleton / single.  
+
+\subsection{Evaluation Metrics}
+Tag/entity level, Character level, and label-level: Accuracy, Precision, Recall, F1-score 
+Tag-level: measure an entire entity (B-entity, (I-entity,) E-entity) is right or not.
+Character-level: measure each character's prediction is right or not.
+label-level: measure the performance from B / I / O / E / S.
+
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
+\end{document}
