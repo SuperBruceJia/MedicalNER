@@ -34,7 +34,7 @@ With the development of Medical Artificial Intelligence (AI) System, Natural Lan
 
 &emsp;For Word-level models:
 
-&emsp;The pre-trained word vectors can be downloaded [here](https://drive.google.com/file/d/19UoQOS0MCefIiqTqpQAzFePJdsRnmpuC/view?usp=sharing).
+&emsp;The pre-trained word vectors can be downloaded [here](https://drive.google.com/file/d/1Rfe7QObJnaOUYK3cIQ6BXLyuJg-5516Y/view?usp=sharing).
 
 ```python
 def load_word_vector(self):
